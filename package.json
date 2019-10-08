@@ -1,0 +1,33 @@
+{
+  "name": "challenge_2",
+  "version": "1.0.0",
+  "description": "a single-page app for viewing the historical price data for any cryptocurrency",
+  "main": "webpack.config.js",
+  "author": "ssoro013",
+  "license": "ISC",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js -d -w",
+    "start": "nodemon ./server/server.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.6",
+    "chart.js": "^2.8.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "redis": "^2.8.0",
+    "request": "^2.88.0",
+    "webpack": "^4.41.0"
+  }
+}
