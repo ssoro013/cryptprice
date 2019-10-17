@@ -29,11 +29,9 @@ const BitcoinChart = (props) => {
         });
     return (
     <div>
-        <canvas id="bitcoinChart"
-        ref={myChartRef}/>
+        <canvas/>
     </div>
     )
-    
 }
 
 export default BitcoinChart;

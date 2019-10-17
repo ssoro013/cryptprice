@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import BitcoinChart from './Chart.jsx';
+import MyChart from './MyChart.jsx';
 import moment from 'moment';
 
 
@@ -52,6 +53,7 @@ class App extends React.Component {
                     })}
                     </select>
                 <BitcoinChart coin={this.state.coin} labels={this.state.labels1} prices={this.state.prices1}/>
+                {/* <MyChart /> */}
             </div>
         )
     }
