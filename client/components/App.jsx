@@ -33,8 +33,9 @@ class App extends React.Component {
   }
 
   getPrices() {
+    const { coin } = this.state;
     axios
-      .get('/coins', { params: { id: this.state.coin } })
+      .get('/coins', { params: { id: coin } })
       .then(response => {
         const labels = response.data.Data.Data.map(i =>
           moment(new Date(i.time * 1000)).format('l'),
@@ -53,19 +54,17 @@ class App extends React.Component {
   }
 
   render() {
+    const { coin, coins, labels1, prices1 } = this.state;
+    const menu = Object.keys(coins).map(item => {
+      return <option key={item}>{item}</option>;
+    });
     return (
       <div>
         <h2>Cryptocurrency Price Index</h2>
-        <select value={this.state.coin} onChange={this.handleChange}>
-          {Object.keys(this.state.coins).map((coin, index) => {
-            return <option key={index}>{coin}</option>;
-          })}
+        <select value={coin} onChange={this.handleChange}>
+          {menu};
         </select>
-        <BitcoinChart
-          coin={this.state.coin}
-          labels={this.state.labels1}
-          prices={this.state.prices1}
-        />
+        <BitcoinChart coin={coin} labels={labels1} prices={prices1} />
         {/* <MyChart /> */}
       </div>
     );
