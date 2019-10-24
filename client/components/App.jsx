@@ -1,10 +1,11 @@
-import React from 'react';
+/* eslint-disable import/extensions */
+import React, { Component } from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import BitcoinChart from './Chart.jsx';
 // import MyChart from './MyChart.jsx';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
