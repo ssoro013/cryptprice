@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 class NavBar extends Component {
     
     render() {
-        
+        <div>
+            
+        </div>
     }
 }
