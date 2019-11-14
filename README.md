@@ -1,13 +1,2 @@
-## Heading ##
-  > 
-
-## Sub-Heading ##
-  > 
-
-## Summary ##
-
-## To Install Dependencies
-
-## To Start Application
-
-## To Implement Redis Cache
+## Cryptprice ##
+  >  An application to monitor the historical prices of top 10 cryptocurrencies
